@@ -12,7 +12,11 @@ export async function getStaticProps() {
 export default function staticD(props) {
     function renderProducts() {
         return props.products.map(products =>{
-            return <li key={products.randomNumber}>{products.name} is priced at ${products.price}</li>
+            return (
+                <li key={products.id}>
+                    {products.id} - {products.name} is priced at ${products.price}
+                </li>
+            )
         })
     }
 
